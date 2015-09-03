@@ -1,0 +1,112 @@
+/* 
+    ========
+    CSS Reset - short and sweet with only a few tags used for this doc
+    ========
+*/
+html, body, div, p, ul, ol, main, h1, h2, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    }
+
+/*
+    ====
+    Grid 
+    ====
+*/
+.row { overflow: hidden; }
+.row:after {
+    clear: both;
+    content: "";
+    display: table;
+    }
+.left-col {
+    float: left;
+    width: 49%;
+   margin-right: 1%;
+    }
+.right-col {
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+    }
+
+/*
+    ========
+    Elements
+    ========
+*/    
+body { 
+    background: #343642; 
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px; 
+    color: white;
+    }
+main { 
+    display: block; 
+    width: 600px;
+    margin: 0 auto;
+    }
+h1, h2, h3, h4 { 
+    font-weight: 700;
+    margin: 20px;
+    }
+h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+p { margin: 20px; }    
+
+ol { 
+    padding: 0 0 0 21px;
+    list-style-type: decimal;
+    list-style-position: outside;
+    }
+ul { 
+    padding: 0;
+    list-style: none; }
+ul li { 
+    padding-left: 21px;
+    text-indent: -15px;
+    }
+ul li:before {
+    content: "\25cf\00a0\00a0";
+    color: #9ba1a0;
+    font-size: 85%;
+    }    
+button.alert_btn {
+    background: #982C3C;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto 0px;
+    font: normal 18px 'Titillium Web', sans-serif;
+    }
+div.alert_box {
+    display: none; 
+    color: black;
+    }
+code {
+    background: #202129;
+    padding: 0 4px 2px;
+    border-radius: 5px;
+    }
+    
+/* 
+    ============
+    Media Queries    
+    ============
+*/    
+@media (max-width: 768px) {
+    main { width: 90% }
+}  
+
+@media (max-width: 550px) {
+    .left-col, .right-col {
+        float: none;
+        width: 100%;
+        margin: 0;
+        }
+}

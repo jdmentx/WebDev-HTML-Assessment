@@ -1,55 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>WebDev Assessment</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">    
 	<link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:700,400,400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+	<main>
+        <section class="summary">
+            <h1>WebDev Assessment</h1>
+            <p><em>This</em> is the assessment. It is both objective and subjective.</p>
+            <p>The goals of this assessment are to get a general understanding of your skill
+            level, attention to detail, and understanding of the web.</p>
+        </section> <!-- summary -->
+        
+        <section class="specifications">
+            <div class="row">
+                <div class="left-col">
+                    <h2>Requirements</h2>
+                    <ol>
+                        <li>Replicate this mockup (yes, the assessment instructions) in HTML/CSS/JavaScript
+                        as closely as possible.</li>
+                        <li>Use HTML5.</li>
+                        <li>Use the "Titillium Web" font.</li>
+                        <li>Clicking "Submit!" should create an alert with jQuery</li>
+                        <li>The contents of the alert should contain the answer to, "How old is Bobby if, in
+                        4 years, he will be 3 times as old as he is today?"</li>
+                    </ol>
+                </div> <!-- left col -->
+                
+                <div class="right-col">
+                    <h2>Guidelines</h2>
+                    
+                    <ul>
+                        <li>Demonstrate knowledge of HTML5</li>
+                        <li>Demonstrate knowledge of efficient CSS</li>
+                        <li>Demonstrate knowledge of the DOM</li>
+                        <li>Demonstrate knowledge of jQuery</li>
+                        <li>Demonstrate knowledge of version control</li>
+                        <li>Use performant and secure methods</li>
+                    </ul>
+                </div> <!-- right col -->
+            </div> <!-- row -->
 
-	<style>
-		body {
-			background: #fff;
-		}
-	</style>
+            <button class="alert_btn">Submit!</button>
+            
+            <div class="alert_box">
+                Bobby is 2 years old. 2+4=6=2x3
+            </div>
 
-	<container>
-
-WebDev Assessment
-
-This is the assessment. It is both objective and subjective.
-
-The goals of this assessment are to get a general understanding of your skill
-level, attention to detail, and understanding of the web.
-
-Requirements
-
-Replicate this mockup (yes, the assessment instructions) in HTML/CSS/JavaScript
-as closely as possible.
-Use HTML5.
-Use the "Titillium Web" font.
-Clicking "Submit!" should create an alert with jQuery
-The contents of the alert should contain the answer to, "How old is Bobby if, in
-4 years, he will be 3 times as old as he is today?"
-
-Guidelines
-
-Demonstrate knowledge of HTML5
-Demonstrate knowledge of efficient CSS
-Demonstrate knowledge of the DOM
-Demonstrate knowledge of jQuery
-Demonstrate knowledge of version control
-Use performant and secure methods
-
-Submit!
-
-Using git or git-svn, submit a Github pull request to the original repository
-for our review. If you are not able to submit a pull request, email us your
-zipped project.
-
-		</div>
-	</container>
+            <p>Using <code>git</code> or <code>git-svn</code>, submit a Github pull request to the original repository
+            for our review. If you are not able to submit a pull request, email us your
+            zipped project.</p>
+        </section> <!-- specifications -->
+	</main>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.alert_btn').click(function() {
+            $('.alert_box').dialog();
+            return false;
+          });
+    });
+   </script>
 </body>
 </html>
